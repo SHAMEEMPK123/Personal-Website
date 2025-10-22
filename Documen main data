@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shameem PK | Personal Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 0;
+    }
+    header img.profile {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #0073e6;
+      margin-bottom: 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    .social-icons {
+      margin-top: 1rem;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      display: inline-block;
+    }
+    .social-icons img {
+      width: 30px;
+      height: 30px;
+      transition: transform 0.3s;
+    }
+    .social-icons img:hover {
+      transform: scale(1.2);
+    }
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      border-bottom: 2px solid #0073e6;
+      padding-bottom: 0.5rem;
+      color: #0073e6;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #1a1a1a;
+      color: #fff;
+      margin-top: 2rem;
+    }
+    a {
+      color: #0073e6;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="profile.jpg" alt="Shameem PK Photo" class="profile">
+    <h1>Shameem PK</h1>
+    <p>Assistant Director & Physics Faculty | IIM Ranchi PGP | NIT Rourkela M.Tech</p>
+    <div class="social-icons">
+      <a href="mailto:shamimpni@gmail.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email"></a>
+      <a href="https://www.linkedin.com/in/shameem-pk-2a816a110" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"></a>
+      <a href="https://github.com/shameempk" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub"></a>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Born in Malappuram, India (17 Oct 1996). Passionate about education, leadership, and continuous learning. Currently serving as Assistant Director and Physics Faculty at Aakash, combining academic excellence with practical teaching experience.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <ul>
+      <li><strong>Address:</strong> Poolakkundan H, Cherukulamba, Kerala 676507, India</li>
+      <li><strong>Phone:</strong> +91 8113989287</li>
+      <li><strong>Email:</strong> <a href="mailto:shamimpni@gmail.com">shamimpni@gmail.com</a></li>
+      <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/shameem-pk-2a816a110" target="_blank">View Profile</a></li>
+    </ul>
+  </section>
+
+  <section id="experience">
+    <h2>Professional Experience</h2>
+    <ul>
+      <li><strong>Assistant Director & Physics Faculty</strong> – Aakash (2021–Present)</li>
+      <li><
