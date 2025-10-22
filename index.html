@@ -3,24 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shameem PK — Professional Profile</title>
+<title>Shameem PK — Professional Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
+  :root {
+    --primary-color: #0B3D91;
+    --secondary-color: #ffd700;
+    --bg-light: #f0f2f5;
+    --bg-dark: #121212;
+    --text-light: #333;
+    --text-dark: #f5f5f5;
+  }
+
   body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background-color: #f0f2f5;
-    color: #333;
     scroll-behavior: smooth;
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    transition: background 0.5s, color 0.5s;
+  }
+
+  body.dark-mode {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
   }
 
   /* Navbar */
   nav {
     position: sticky;
     top: 0;
-    background-color: #0B3D91;
+    background-color: var(--primary-color);
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 15px 0;
     z-index: 1000;
   }
@@ -34,14 +51,43 @@
   }
 
   nav a:hover {
-    color: #ffd700;
+    color: var(--secondary-color);
+  }
+
+  /* Theme Toggle Button */
+  .theme-toggle {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: white;
+    transition: color 0.3s;
+  }
+
+  .theme-toggle:hover {
+    color: var(--secondary-color);
   }
 
   header {
-    background-color: #0B3D91;
+    background-color: var(--primary-color);
     color: white;
     padding: 80px 20px 50px;
     text-align: center;
+    position: relative;
+  }
+
+  header img.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid white;
+    transition: transform 0.5s;
+  }
+
+  header img.profile-img:hover {
+    transform: scale(1.05);
   }
 
   header h1 {
@@ -64,13 +110,29 @@
 
   section {
     margin-bottom: 50px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+  }
+
+  section:nth-child(1) { animation-delay: 0.2s; }
+  section:nth-child(2) { animation-delay: 0.4s; }
+  section:nth-child(3) { animation-delay: 0.6s; }
+  section:nth-child(4) { animation-delay: 0.8s; }
+  section:nth-child(5) { animation-delay: 1s; }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   section h2 {
-    color: #0B3D91;
+    color: var(--primary-color);
     font-weight: 600;
     font-size: 2em;
-    border-bottom: 3px solid #0B3D91;
+    border-bottom: 3px solid var(--primary-color);
     padding-bottom: 10px;
     margin-bottom: 20px;
   }
@@ -82,22 +144,50 @@
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;
+  }
+
+  body.dark-mode .card {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 12px rgba(255,255,255,0.05);
   }
 
   .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) scale(1.02);
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+
+  .card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .card-content {
+    flex: 1;
   }
 
   .card h3 {
     margin: 0 0 5px;
     font-size: 1.3em;
-    color: #0B3D91;
+    color: var(--primary-color);
+  }
+
+  body.dark-mode .card h3 {
+    color: #ffcc00;
   }
 
   .card span {
     font-size: 0.95em;
     color: #555;
+  }
+
+  body.dark-mode .card span {
+    color: #bbb;
   }
 
   .card p {
@@ -109,7 +199,7 @@
     display: inline-block;
     margin-top: 10px;
     padding: 8px 15px;
-    background-color: #0B3D91;
+    background-color: var(--primary-color);
     color: white;
     border-radius: 5px;
     text-decoration: none;
@@ -129,6 +219,31 @@
     border-top: 1px solid #ddd;
     margin-top: 50px;
   }
+
+  body.dark-mode footer {
+    border-top: 1px solid #444;
+    color: #aaa;
+  }
+
+  /* Social Icons */
+  .social-icons {
+    margin-top: 10px;
+  }
+
+  .social-icons a {
+    color: var(--primary-color);
+    margin-right: 15px;
+    font-size: 1.2em;
+    transition: color 0.3s;
+  }
+
+  .social-icons a:hover {
+    color: var(--secondary-color);
+  }
+
+  body.dark-mode .social-icons a {
+    color: #ffcc00;
+  }
 </style>
 </head>
 <body>
@@ -140,11 +255,18 @@
   <a href="#education">Education</a>
   <a href="#skills">Skills</a>
   <a href="#posts">Posts</a>
+  <i class="fas fa-adjust theme-toggle" onclick="toggleTheme()"></i>
 </nav>
 
 <header>
+  <img src="https://via.placeholder.com/150" alt="Shameem PK" class="profile-img">
   <h1>Shameem PK</h1>
   <p>Assistant Director | Academic Leadership | India</p>
+  <div class="social-icons">
+    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="mailto:shamimpni@gmail.com"><i class="fas fa-envelope"></i></a>
+  </div>
 </header>
 
 <div class="container">
@@ -152,61 +274,85 @@
   <section id="about">
     <h2>About Me</h2>
     <div class="card">
-      <p>
-        Experienced academic professional with expertise in leadership, content development, and faculty management. Passionate about enhancing student outcomes and institutional excellence.
-      </p>
-      <a href="#" class="button">View LinkedIn</a>
+      <img src="https://via.placeholder.com/100" alt="About Image">
+      <div class="card-content">
+        <p>
+          Experienced academic professional with expertise in leadership, content development, and faculty management. Passionate about enhancing student outcomes and institutional excellence.
+        </p>
+        <a href="#" class="button">View LinkedIn</a>
+      </div>
     </div>
   </section>
 
   <section id="experience">
     <h2>Experience</h2>
     <div class="card">
-      <h3>Assistant Director — Aakash</h3>
-      <span>2025 – Present</span>
-      <p>Managing faculty and academic operations; driving student engagement and performance through strategic initiatives.</p>
-      <a href="#" class="button">More Details</a>
+      <img src="https://via.placeholder.com/100" alt="Experience Image">
+      <div class="card-content">
+        <h3>Assistant Director — Aakash</h3>
+        <span>2025 – Present</span>
+        <p>Managing faculty and academic operations; driving student engagement and performance through strategic initiatives.</p>
+        <a href="#" class="button">More Details</a>
+      </div>
     </div>
     <div class="card">
-      <h3>Physics Faculty — Aakash</h3>
-      <span>2023 – 2025</span>
-      <p>Taught Physics to high-performing students, developed content, and contributed to curriculum enhancement.</p>
-      <a href="#" class="button">More Details</a>
+      <img src="https://via.placeholder.com/100" alt="Experience Image">
+      <div class="card-content">
+        <h3>Physics Faculty — Aakash</h3>
+        <span>2023 – 2025</span>
+        <p>Taught Physics to high-performing students, developed content, and contributed to curriculum enhancement.</p>
+        <a href="#" class="button">More Details</a>
+      </div>
     </div>
   </section>
 
   <section id="education">
     <h2>Education</h2>
     <div class="card">
-      <h3>M.Tech, Mechanical Engineering — NIT Rourkela</h3>
-      <span>2018 – 2020</span>
-      <a href="#" class="button">View Project</a>
+      <img src="https://via.placeholder.com/100" alt="Education Image">
+      <div class="card-content">
+        <h3>M.Tech, Mechanical Engineering — NIT Rourkela</h3>
+        <span>2018 – 2020</span>
+        <a href="#" class="button">View Project</a>
+      </div>
     </div>
     <div class="card">
-      <h3>B.Tech, Mechanical Engineering — CET Trivandrum</h3>
-      <span>2014 – 2018</span>
-      <a href="#" class="button">View Project</a>
+      <img src="https://via.placeholder.com/100" alt="Education Image">
+      <div class="card-content">
+        <h3>B.Tech, Mechanical Engineering — CET Trivandrum</h3>
+        <span>2014 – 2018</span>
+        <a href="#" class="button">View Project</a>
+      </div>
     </div>
   </section>
 
   <section id="skills">
     <h2>Skills</h2>
     <div class="card">
-      <p>Academic Leadership • Content Development • Faculty Management • Physics • Problem Solving • Strategic Planning</p>
+      <img src="https://via.placeholder.com/100" alt="Skills Image">
+      <div class="card-content">
+        <p>Academic Leadership • Content Development • Faculty Management • Physics • Problem Solving • Strategic Planning</p>
+      </div>
     </div>
   </section>
 
   <section id="posts">
     <h2>Recent Posts</h2>
     <div class="card">
-      <p><strong>Launching Academic Initiatives</strong></p>
-      <p>Sharing strategies to enhance student learning and faculty productivity.</p>
-      <a href="#" class="button">Read More</a>
+      <img src="https://via.placeholder.com/100" alt="Post Image">
+      <div class="card-content">
+        <p><strong>Launching Academic Initiatives</strong></p>
+        <p>Sharing strategies to enhance student learning and faculty productivity.</p>
+        <a href="#" class="button">Read More</a>
+      </div>
     </div>
     <div class="card">
-      <p><strong>Insights on Physics Education</strong></p>
-      <p>Tips for mastering conceptual understanding and exam performance.</p>
-      <a href="#" class="button">Read More</a>
+      <img src="https://via.placeholder.com/100" alt="Post Image">
+      <div class="card-content">
+        <p><strong>Insights on Physics Education</strong></p>
+        <p>Tips for mastering conceptual understanding and exam performance.</p>
+        <a href="#" class="button">Read More</a>
+      </div>
     </div>
   </section>
 
@@ -215,6 +361,12 @@
 <footer>
   &copy; 2025 Shameem PK. All Rights Reserved.
 </footer>
+
+<script>
+  function toggleTheme() {
+    document.body.classList.toggle('dark-mode');
+  }
+</script>
 
 </body>
 </html>
