@@ -1,157 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shameem PK — Professional Profile</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Inter', sans-serif;
-      color: #333;
-      background: #f8f9fa;
-    }
-    header {
-      background: #0B3D91;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 3em;
-      font-weight: 700;
-    }
-    header p {
-      margin: 10px 0 0;
-      font-size: 1.2em;
-      font-weight: 400;
-      letter-spacing: 1px;
-    }
-    .container {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-    section {
-      margin-bottom: 40px;
-    }
-    section h2 {
-      border-bottom: 3px solid #0B3D91;
-      padding-bottom: 8px;
-      margin-bottom: 20px;
-      color: #0B3D91;
-      font-weight: 600;
-      font-size: 1.8em;
-    }
-    .card {
-      background: white;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    .card h3 {
-      margin: 0 0 5px;
-      font-size: 1.2em;
-      font-weight: 600;
-      color: #0B3D91;
-    }
-    .card span {
-      font-size: 0.95em;
-      color: #555;
-    }
-    .card p {
-      margin-top: 5px;
-      line-height: 1.5;
-    }
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      color: #777;
-      font-size: 0.9em;
-      border-top: 1px solid #ddd;
-      margin-top: 50px;
-    }
-    a {
-      color: #0B3D91;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shameem PK — Professional Profile</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    scroll-behavior: smooth;
+  }
+
+  /* Navbar */
+  nav {
+    position: sticky;
+    top: 0;
+    background-color: #0B3D91;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    z-index: 1000;
+  }
+
+  nav a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+
+  nav a:hover {
+    color: #ffd700;
+  }
+
+  header {
+    background-color: #0B3D91;
+    color: white;
+    padding: 80px 20px 50px;
+    text-align: center;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 3em;
+    font-weight: 700;
+  }
+
+  header p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+    font-weight: 500;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+  }
+
+  section {
+    margin-bottom: 50px;
+  }
+
+  section h2 {
+    color: #0B3D91;
+    font-weight: 600;
+    font-size: 2em;
+    border-bottom: 3px solid #0B3D91;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+
+  .card h3 {
+    margin: 0 0 5px;
+    font-size: 1.3em;
+    color: #0B3D91;
+  }
+
+  .card span {
+    font-size: 0.95em;
+    color: #555;
+  }
+
+  .card p {
+    margin-top: 10px;
+    line-height: 1.6;
+  }
+
+  .card a.button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #0B3D91;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s;
+  }
+
+  .card a.button:hover {
+    background-color: #07326d;
+  }
+
+  footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: #777;
+    font-size: 0.9em;
+    border-top: 1px solid #ddd;
+    margin-top: 50px;
+  }
+</style>
 </head>
 <body>
 
-  <header>
-    <h1>Shameem PK</h1>
-    <p>Assistant Director | Academic Leadership | India</p>
-  </header>
+<!-- Navbar -->
+<nav>
+  <a href="#about">About</a>
+  <a href="#experience">Experience</a>
+  <a href="#education">Education</a>
+  <a href="#skills">Skills</a>
+  <a href="#posts">Posts</a>
+</nav>
 
-  <div class="container">
+<header>
+  <h1>Shameem PK</h1>
+  <p>Assistant Director | Academic Leadership | India</p>
+</header>
 
-    <section id="about">
-      <h2>About Me</h2>
-      <div class="card">
-        <p>
-          Experienced academic professional with expertise in leadership, content development, and faculty management. Passionate about enhancing student outcomes and institutional excellence.
-        </p>
-      </div>
-    </section>
+<div class="container">
 
-    <section id="experience">
-      <h2>Experience</h2>
-      <div class="card">
-        <h3>Assistant Director — Aakash</h3>
-        <span>2025 – Present</span>
-        <p>Managing faculty and academic operations; driving student engagement and performance through strategic initiatives.</p>
-      </div>
-      <div class="card">
-        <h3>Physics Faculty — Aakash</h3>
-        <span>2023 – 2025</span>
-        <p>Taught Physics to high-performing students, developed content, and contributed to curriculum enhancement.</p>
-      </div>
-    </section>
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>
+        Experienced academic professional with expertise in leadership, content development, and faculty management. Passionate about enhancing student outcomes and institutional excellence.
+      </p>
+      <a href="#" class="button">View LinkedIn</a>
+    </div>
+  </section>
 
-    <section id="education">
-      <h2>Education</h2>
-      <div class="card">
-        <h3>M.Tech, Mechanical Engineering — NIT Rourkela</h3>
-        <span>2018 – 2020</span>
-      </div>
-      <div class="card">
-        <h3>B.Tech, Mechanical Engineering — CET Trivandrum</h3>
-        <span>2014 – 2018</span>
-      </div>
-    </section>
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="card">
+      <h3>Assistant Director — Aakash</h3>
+      <span>2025 – Present</span>
+      <p>Managing faculty and academic operations; driving student engagement and performance through strategic initiatives.</p>
+      <a href="#" class="button">More Details</a>
+    </div>
+    <div class="card">
+      <h3>Physics Faculty — Aakash</h3>
+      <span>2023 – 2025</span>
+      <p>Taught Physics to high-performing students, developed content, and contributed to curriculum enhancement.</p>
+      <a href="#" class="button">More Details</a>
+    </div>
+  </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="card">
-        <p>Academic Leadership • Content Development • Faculty Management • Physics • Problem Solving • Strategic Planning</p>
-      </div>
-    </section>
+  <section id="education">
+    <h2>Education</h2>
+    <div class="card">
+      <h3>M.Tech, Mechanical Engineering — NIT Rourkela</h3>
+      <span>2018 – 2020</span>
+      <a href="#" class="button">View Project</a>
+    </div>
+    <div class="card">
+      <h3>B.Tech, Mechanical Engineering — CET Trivandrum</h3>
+      <span>2014 – 2018</span>
+      <a href="#" class="button">View Project</a>
+    </div>
+  </section>
 
-    <section id="posts">
-      <h2>Recent Posts</h2>
-      <div class="card">
-        <p><strong>Launching Academic Initiatives</strong></p>
-        <p>Sharing strategies to enhance student learning and faculty productivity. <a href="#">Read more</a></p>
-      </div>
-      <div class="card">
-        <p><strong>Insights on Physics Education</strong></p>
-        <p>Tips for mastering conceptual understanding and exam performance. <a href="#">Read more</a></p>
-      </div>
-    </section>
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="card">
+      <p>Academic Leadership • Content Development • Faculty Management • Physics • Problem Solving • Strategic Planning</p>
+    </div>
+  </section>
 
-  </div>
+  <section id="posts">
+    <h2>Recent Posts</h2>
+    <div class="card">
+      <p><strong>Launching Academic Initiatives</strong></p>
+      <p>Sharing strategies to enhance student learning and faculty productivity.</p>
+      <a href="#" class="button">Read More</a>
+    </div>
+    <div class="card">
+      <p><strong>Insights on Physics Education</strong></p>
+      <p>Tips for mastering conceptual understanding and exam performance.</p>
+      <a href="#" class="button">Read More</a>
+    </div>
+  </section>
 
-  <footer>
-    &copy; 2025 Shameem PK. All Rights Reserved.
-  </footer>
+</div>
+
+<footer>
+  &copy; 2025 Shameem PK. All Rights Reserved.
+</footer>
 
 </body>
 </html>
