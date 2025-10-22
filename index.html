@@ -11,12 +11,31 @@
       color: #333333;
       margin: 0;
       padding: 0;
+      scroll-behavior: smooth;
     }
     header {
       background-color: #1a1a1a;
       color: #fff;
       text-align: center;
       padding: 2rem 0;
+    }
+    nav {
+      background-color: #0073e6;
+      padding: 0.5rem 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffdd57;
     }
     header img.profile {
       width: 150px;
@@ -85,6 +104,16 @@
   </style>
 </head>
 <body>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#skills">Skills</a>
+  </nav>
+
   <header>
     <img src="profile.jpg" alt="Shameem PK Photo" class="profile">
     <h1>Shameem PK</h1>
@@ -115,4 +144,42 @@
     <h2>Professional Experience</h2>
     <ul>
       <li><strong>Assistant Director & Physics Faculty</strong> – Aakash (2021–Present)</li>
-      <li><
+      <li><strong>Content Developer</strong> – ENTRI (2021–2022)</li>
+      <li><strong>Educator</strong> – Unacademy (2021–2022)</li>
+      <li><strong>SME</strong> – Chegg, Vedantu, McGraw Hill, Revamp 24, Agarwal Group</li>
+      <li><strong>Internships:</strong> BPCL Kochi Refinery, Indian Railways</li>
+    </ul>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>PGP – Leadership & Change Management</strong>, IIM Ranchi</li>
+      <li><strong>M.Tech – Mechanical Engineering (Cryogenics)</strong>, NIT Rourkela</li>
+      <li><strong>B.Tech – Mechanical Engineering</strong>, CET Trivandrum</li>
+    </ul>
+  </section>
+
+  <section id="achievements">
+    <h2>Achievements</h2>
+    <ul>
+      <li>Qualified GATE (Mechanical & Engineering Science)</li>
+      <li>Top 1.9% in JEE-Mains</li>
+      <li>598 Rank – KEAM, 715 AIR – CUSAT, 315 AIR – ICAR</li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Skills & Interests</h2>
+    <ul>
+      <li>Technical: AutoCAD, ANSYS, MS Excel, Word, PowerPoint</li>
+      <li>Languages: Malayalam, English, Hindi, Arabic</li>
+      <li>Interests: Teaching, Technology, Badminton, Traveling</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Shameem PK | Designed with passion and simplicity</p>
+  </footer>
+</body>
+</html>
